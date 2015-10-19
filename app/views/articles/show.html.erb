@@ -1,0 +1,16 @@
+<br /><br />
+
+<div class="articlediv1">
+   <%= @article.title%><br /><br />
+   <%= @article.content%>
+</div>
+
+<p> <%=@article.comments.count%> Comments </p>
+
+  <%= render @article.comments %>
+
+  <br \>
+
+  <%= render "comments/form"%>
+
+ <br /><br /><%=link_to 'back', articles_path %>

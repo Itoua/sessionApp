@@ -1,0 +1,35 @@
+<br \><br \><br \>
+
+<%if policy(@article).new?%>
+     <h3><%=link_to 'Add new Article', new_article_path %></h3>
+<%end%>
+
+<% @article.each do |article| %>
+
+<br \><br \>
+
+<div class = "articlediv">
+    <%if policy(article).show? %>
+        <%= link_to article.title, article_path(article)%> <br \>
+    <%end%>
+    <p><%= article.content%></p>
+
+    <%if policy(article).update? %>
+        <%= link_to 'Edit', edit_article_path(article) %> -
+    <%end%>
+
+    <%if policy(article).destroy? %>
+        <%= link_to 'Delete', article_path(article), method: :delete , data: { confirm: 'Are you sure?' } %> <br \>
+    <%end%>
+
+    <br \>
+
+    <p> <%= article.comments.count %> Comments </p>
+
+     <br \><br \>
+  
+</div>
+
+<br\>
+
+<% end %>
