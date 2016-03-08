@@ -8,7 +8,7 @@
         Created <%= time_ago_in_words(comment.created_at)%> ago 
     </p>
 
-    <%if policy(comment).update? %>
+    <%if policy(comment).edit? %>
     <%#<%=link_to 'Edit', edit_article_comment_path(comment.article, comment) %>
     <%=link_to 'Edit', edit_article_comment_path(@article, comment) %>
     <%end%>

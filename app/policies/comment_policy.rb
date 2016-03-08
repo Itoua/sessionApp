@@ -16,7 +16,7 @@ class CommentPolicy
   end
 
   def edit?
-    policy_check?
+    @current_user.id == @comment.user_id
   end
 
   private 

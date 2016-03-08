@@ -14,7 +14,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem "declarative_authorization", :source => "http://gemcutter.org"
-gem 'activeadmin'
+gem 'activeadmin', github: 'activeadmin'
 gem 'draper'
 gem 'jquery-rails'
 gem 'turbolinks'
